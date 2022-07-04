@@ -38,4 +38,8 @@ public class Duration {
     public int hashCode() {
         return Objects.hash(durationInMinutes);
     }
+
+    public long durationInMinutes() {
+        return this.durationInMinutes;
+    }
 }

@@ -4,7 +4,6 @@ import org.joda.money.Money;
 
 public class PricingEngine {
     public Money calculatePrice(Duration duration, Money pricePerMinute) {
-        // TODO: Implement method
-        return null;
+        return pricePerMinute.multipliedBy(duration.durationInMinutes());
     }
 }

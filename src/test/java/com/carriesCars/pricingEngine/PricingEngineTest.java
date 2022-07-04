@@ -13,9 +13,10 @@ public class PricingEngineTest {
         PricingEngine pricingEngine = new PricingEngine();
 
         Duration duration = Duration.ofMinutes(1);
-        Money actual = pricingEngine.calculatePrice(duration);
+        Money pricePerMinute = Money.of(CurrencyUnit.EUR, 0.30);
+        Money actual = pricingEngine.calculatePrice(duration, pricePerMinute);
 
-        Money expected = Money.of(CurrencyUnit.EUR, 0.30);
+        Money expected = pricePerMinute;
         assertEquals(expected, actual);
     }
 
